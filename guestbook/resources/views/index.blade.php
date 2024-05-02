@@ -5,6 +5,7 @@
 <div class="container">
     <h1>Gästebuch</h1>
     <form method="GET" action="{{route('index', [], false)}}">
+        @csrf
         <div class="mb-3">
             <label for="inputUsername" class="form-label">Username</label>
             <input type="text" class="form-control" id="inputUsername">
