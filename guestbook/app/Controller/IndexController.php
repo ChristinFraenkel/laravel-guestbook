@@ -4,10 +4,11 @@ namespace App\Controller;
 
 class IndexController{
 
-    public function indexAction(){
+    public function indexAction()
+    {
         
-        return 'Hallo Welt';
-        
+        return view('index');
+
     }
 
 }
