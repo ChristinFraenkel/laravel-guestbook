@@ -2,5 +2,9 @@
 
 @section('title', 'Gästebuch')
 @section('content')
-Hallo Welt aus dem View
+<div class="container">
+    <h1>Gästebuch</h1>
+    <p>Hallo Welt aus dem View</p>
+</div>
+
 @endsection
