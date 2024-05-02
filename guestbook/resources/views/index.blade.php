@@ -4,7 +4,8 @@
 @section('content')
 <div class="container">
     <h1>Gästebuch</h1>
-    <p>Hallo Welt aus dem View</p>
+    <form method="GET" action="{{route('index', [], false)}}">
+    </form>
 </div>
 
 @endsection
