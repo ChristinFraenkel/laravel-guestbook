@@ -21,7 +21,9 @@ class IndexController{
             return redirect()->route('index')->with('success', 'Erfolgreich gespeichert!');
         }
 
-        return view('index');
+        $entries = GuestBookEntry::query()->orderBy('created_at', 'DESC')->get();
+        
+        return view('index', ['entries'=>$entries]);
 
     }
 
