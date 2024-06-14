@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Models\GuestBookEntry;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -16,6 +17,7 @@ class IndexController{
                 'subtitle' =>'required|max:255',
                 'body' => 'required'
             ]);
+            GuestBookEntry::create($validated);
             dump($validated);
         }
 
