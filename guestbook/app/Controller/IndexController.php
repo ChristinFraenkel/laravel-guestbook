@@ -20,7 +20,7 @@ class IndexController{
             GuestBookEntry::create($validated);
             return redirect()->route('index')->with('success', 'Erfolgreich gespeichert!');
         }
-        $limit = 1;
+        $limit = max(env('LIMIT'), 1);
         $maxEntries = GuestBookEntry::count();
         $maxPages = (int)ceil($maxEntries/$limit);
         $page = (int)$request->get('page', 1);
