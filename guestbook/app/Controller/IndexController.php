@@ -8,7 +8,7 @@ use Illuminate\View\View;
 
 class IndexController{
 
-    public function indexAction(Request $request): View
+    public function indexAction(Request $request)
     {
         if($request->getMethod() == 'POST'){
             $validated = $request->validate([
@@ -18,7 +18,7 @@ class IndexController{
                 'body' => 'required'
             ]);
             GuestBookEntry::create($validated);
-            dump($validated);
+            return redirect()->route('index')->with('success', 'Erfolgreich gespeichert!');
         }
 
         return view('index');
